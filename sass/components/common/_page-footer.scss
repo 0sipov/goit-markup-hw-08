@@ -1,0 +1,12 @@
+footer {
+  background-color: #2f303a;
+}
+.footer {
+  padding: 60px 0;
+  display: flex;
+  .logo {
+    display: block;
+    margin-bottom: 20px;
+    color: $secondary;
+  }
+}

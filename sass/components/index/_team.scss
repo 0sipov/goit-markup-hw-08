@@ -1,0 +1,56 @@
+.team {
+  background-color: $grey;
+  h2 {
+    margin-bottom: 50px;
+  }
+  .items {
+    display: flex;
+  }
+  .teammate-card {
+    padding-bottom: 24px;
+    background-color: $secondary;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  p {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+.social-networks {
+  display: flex;
+  justify-content: center;
+  .item:not(:first-child) {
+    margin-left: 10px;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    fill: currentColor;
+    &:hover,
+    &:focus {
+      background-color: $accent;
+      color: $secondary;
+      fill: $secondary;
+    }
+  }
+}

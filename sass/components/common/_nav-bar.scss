@@ -1,0 +1,38 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  margin-left: 85px;
+  display: flex;
+  .current:after {
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: $accent;
+  }
+}
+.site-nav > li {
+  margin-left: 50px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.site-nav a {
+  margin: auto;
+  padding: 32px 0;
+  display: block;
+  position: relative;
+  color: $primary-title-text;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}

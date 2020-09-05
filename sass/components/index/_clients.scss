@@ -1,0 +1,32 @@
+.clients {
+  h2 {
+    margin-bottom: 50px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+  }
+  .items {
+    display: flex;
+    justify-content: center;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 170px;
+    min-height: 90px;
+    fill: $primary-text;
+    border: 1px solid $primary-text;
+    border-radius: 4px;
+    &:hover,
+    &:focus {
+      fill: $accent;
+      border: 1px solid $accent;
+    }
+  }
+  .item:not(:first-child) {
+    margin-left: 30px;
+  }
+}

@@ -1,0 +1,35 @@
+.footer {
+  .social-networks {
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .social-networks a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: $secondary;
+    &:hover,
+    &:focus {
+      background-color: $accent;
+    }
+  }
+  .social-networks p {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $secondary;
+  }
+  .social-networks .items {
+    display: flex;
+  }
+  .social-networks .item:not(:first-child) {
+    margin-left: 10px;
+  }
+}

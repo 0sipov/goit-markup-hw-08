@@ -1,0 +1,96 @@
+.recall-form {
+  label {
+    display: block;
+    position: relative;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+  }
+  svg {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  input {
+    padding-left: 42px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  input:focus,
+  textarea:focus,
+  input:focus + svg {
+    outline: none;
+    fill: $accent;
+    border-color: $accent;
+  }
+  .agreements {
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
+  }
+  .check-input {
+    position: absolute;
+    appearance: none;
+  }
+  .check-input:checked + .checkbox {
+    background-color: $accent;
+    border-color: $accent;
+  }
+  .check-input:checked + .checkbox > .checkbox-svg {
+    fill: $secondary;
+  }
+  .agreements .checkbox {
+    position: absolute;
+    border: 2px solid $primary-title-text;
+    border-radius: 2px;
+    width: 15px;
+    height: 15px;
+    left: 14px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .agreements .checkbox-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: transparent;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .agreements a {
+    text-decoration: underline;
+    color: $accent;
+  }
+  .name,
+  .tel,
+  .mail {
+    margin-bottom: 10px;
+  }
+  .comment {
+    margin-bottom: 20px;
+  }
+  .agreements {
+    margin-bottom: 30px;
+  }
+  .send-button {
+    padding: 10px 55px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border: none;
+    border-radius: 4px;
+    background-color: $accent;
+    color: $secondary;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
