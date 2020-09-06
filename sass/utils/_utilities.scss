@@ -5,6 +5,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  // outline: 1px solid;
   outline-color: $accent;
 }
 body {
@@ -50,7 +51,6 @@ textarea {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
-  min-width: 448px;
   resize: none;
 }
 ul {
@@ -67,12 +67,16 @@ address {
 }
 img {
   display: block;
+  width: 100%;
 }
 section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include viewport('desktop') {
+    padding: 94px 0;
+  }
 }
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 1200px;
+  max-width: 1200px;
 }

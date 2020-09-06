@@ -1,21 +1,28 @@
 .subscribe {
   padding-top: 12px;
-  margin-left: 94px;
   color: $secondary;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
+  @include viewport('desktop') {
+    margin-left: 94px;
+  }
 }
 .subscribe-form {
   margin-top: 20px;
-  display: flex;
+  @include viewport('desktop') {
+    display: flex;
+  }
+
   input[type='email'] {
     padding: 15px 16px;
-    min-width: 352px;
     color: $secondary;
     font-size: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    @include viewport('desktop') {
+      min-width: 352px;
+    }
   }
   button {
     margin-left: 12px;

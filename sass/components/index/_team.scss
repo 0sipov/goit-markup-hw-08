@@ -4,15 +4,44 @@
     margin-bottom: 50px;
   }
   .items {
-    display: flex;
+    @include viewport('tablet') {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    @include viewport('desktop') {
+      flex-wrap: nowrap;
+    }
   }
   .teammate-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
     padding-bottom: 24px;
     background-color: $secondary;
     border-radius: 0 0 4px 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    &:not(:first-child) {
-      margin-left: 30px;
+    & + .teammate-card {
+      @media screen and (max-width: $tablet - 1) {
+        margin-top: 30px;
+      }
+    }
+    @include viewport('tablet') {
+      width: calc((100% - 30px) / 2);
+      &:nth-child(2n) {
+        margin-left: 30px;
+      }
+      @media screen and (max-width: $desktop - 1px) and (min-width: $tablet - 1) {
+        &:nth-child(1),
+        &:nth-child(2) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    @include viewport('desktop') {
+      & + .teammate-card {
+        margin-left: 30px;
+      }
     }
   }
   h3 {

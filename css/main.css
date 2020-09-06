@@ -1,4 +1,5 @@
 /*Colors*/
+/*Break points for media*/
 @font-face {
   font-family: 'roboto';
   src: url("../fonts/Roboto/400.ttf");
@@ -432,7 +433,6 @@ textarea {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
-  min-width: 448px;
   resize: none;
 }
 
@@ -452,16 +452,23 @@ address {
 
 img {
   display: block;
+  width: 100%;
 }
 
 section {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+
+@media (min-width: 1200px) {
+  section {
+    padding: 94px 0;
+  }
 }
 
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 1200px;
+  max-width: 1200px;
 }
 
 button,
@@ -476,8 +483,14 @@ a,
   color: #000000;
   font-family: Raleway, sans-serif;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
 }
 
 .logo span {
@@ -494,13 +507,61 @@ header.border-bottom {
 }
 
 .nav-bar {
-  display: flex;
-  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.nav-bar .menu-button {
+  position: absolute;
+  margin-left: auto;
+  right: 15px;
+  top: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-bar .menu-button :hover,
+.nav-bar .menu-button :focus {
+  fill: #2196f3;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .nav-bar .menu-button {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    padding: 16px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-bar {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .site-nav {
+  left: -100%;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
   margin-left: 85px;
   display: flex;
+}
+
+@media (min-width: 768px) {
+  .site-nav {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .site-nav .current:after {
@@ -537,26 +598,29 @@ header.border-bottom {
   color: #2196f3;
 }
 
-header .tel {
-  margin-left: 30px;
-  display: flex;
-  align-items: center;
+header .contacts {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  display: none;
 }
 
-header .tel .icon {
-  margin-right: 10px;
-  fill: currentColor;
+@media (min-width: 768px) {
+  header .contacts {
+    opacity: 1;
+    pointer-events: auto;
+    top: 15px;
+    right: 21px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-header .mail {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-header .mail .icon {
-  margin-right: 10px;
-  fill: currentColor;
+@media (min-width: 1200px) {
+  header .contacts {
+    flex-direction: row;
+    top: 36px;
+  }
 }
 
 .header-mail-tel {
@@ -569,9 +633,29 @@ header .mail .icon {
   color: #2196f3;
 }
 
+@media (min-width: 1200px) {
+  header .tel {
+    margin-left: 30px;
+  }
+}
+
+header .tel .icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+header .mail {
+  margin-bottom: 10px;
+}
+
+header .mail .icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 .hero {
   margin: 0 auto;
-  padding: 200px 0;
+  padding: 118px 0;
   text-align: center;
   max-width: 1600px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/main/hero_bg.jpg");
@@ -580,15 +664,27 @@ header .mail .icon {
   background-size: cover;
 }
 
+@media (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+  }
+}
+
 .hero h1 {
   margin-bottom: 30px;
   color: #ffffff;
   font-style: normal;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 44px;
+  }
 }
 
 .hero a {
@@ -604,15 +700,41 @@ header .mail .icon {
 }
 
 .advantages .items {
-  display: flex;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .advantages .items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages .items {
+    flex-wrap: nowrap;
+  }
 }
 
 .advantages .item {
-  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.advantages .item:not(:first-child) {
-  margin-left: 30px;
+@media (min-width: 768px) {
+  .advantages .item {
+    width: calc((100% - 30px) / 2);
+  }
+  .advantages .item:nth-child(2n) {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages .item + .item {
+    margin-left: 30px;
+  }
 }
 
 .advantages .background-item {
@@ -620,13 +742,15 @@ header .mail .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 270px;
-  min-height: 120px;
+  height: 120px;
   background-color: #f5f4fa;
+  border-radius: 4px;
 }
 
 .advantages h2 {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .advantages h3 {
@@ -634,6 +758,13 @@ header .mail .icon {
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .advantages h3 {
+    text-align: start;
+  }
 }
 
 .advantages p {
@@ -642,7 +773,18 @@ header .mail .icon {
 }
 
 .we-can {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
   padding-top: 0;
+}
+
+@media (min-width: 1200px) {
+  .we-can {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .we-can .items {
@@ -687,19 +829,55 @@ header .mail .icon {
   margin-bottom: 50px;
 }
 
-.team .items {
-  display: flex;
+@media (min-width: 768px) {
+  .team .items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team .items {
+    flex-wrap: nowrap;
+  }
 }
 
 .team .teammate-card {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
   padding-bottom: 24px;
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.team .teammate-card:not(:first-child) {
-  margin-left: 30px;
+@media screen and (max-width: 767px) {
+  .team .teammate-card + .teammate-card {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .team .teammate-card {
+    width: calc((100% - 30px) / 2);
+  }
+  .team .teammate-card:nth-child(2n) {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-width: 767px) {
+  .team .teammate-card:nth-child(1), .team .teammate-card:nth-child(2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team .teammate-card + .teammate-card {
+    margin-left: 30px;
+  }
 }
 
 .team h3 {
@@ -752,11 +930,6 @@ header .mail .icon {
   text-align: center;
 }
 
-.clients .items {
-  display: flex;
-  justify-content: center;
-}
-
 .clients a {
   display: flex;
   justify-content: center;
@@ -773,17 +946,18 @@ header .mail .icon {
   border: 1px solid #2196f3;
 }
 
-.clients .item:not(:first-child) {
-  margin-left: 30px;
-}
-
 footer {
   background-color: #2f303a;
 }
 
 .footer {
   padding: 60px 0;
-  display: flex;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+  }
 }
 
 .footer .logo {
@@ -841,7 +1015,6 @@ footer {
 
 .subscribe {
   padding-top: 12px;
-  margin-left: 94px;
   color: #ffffff;
   font-style: normal;
   font-weight: 700;
@@ -849,17 +1022,33 @@ footer {
   text-transform: uppercase;
 }
 
+@media (min-width: 1200px) {
+  .subscribe {
+    margin-left: 94px;
+  }
+}
+
 .subscribe-form {
   margin-top: 20px;
-  display: flex;
+}
+
+@media (min-width: 1200px) {
+  .subscribe-form {
+    display: flex;
+  }
 }
 
 .subscribe-form input[type='email'] {
   padding: 15px 16px;
-  min-width: 352px;
   color: #ffffff;
   font-size: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 1200px) {
+  .subscribe-form input[type='email'] {
+    min-width: 352px;
+  }
 }
 
 .subscribe-form button {
@@ -948,6 +1137,10 @@ footer {
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.recall-form {
+  display: none;
 }
 
 .recall-form label {

@@ -3,7 +3,10 @@ footer {
 }
 .footer {
   padding: 60px 0;
-  display: flex;
+  @include viewport('tablet') {
+    display: flex;
+  }
+
   .logo {
     display: block;
     margin-bottom: 20px;

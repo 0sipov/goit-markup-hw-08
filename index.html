@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Студия</title>
+    <meta name="description" content="Эффективные решения для вашего бизнеса">
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
   <body>
@@ -13,6 +14,13 @@
         <nav class="nav-bar">
           <!-- logo -->
           <a href="./index.html" class="logo"><span>Web</span> Studio</a>
+          <!-- Menu button -->
+          <button type="button" class="menu-button" aria-label="Кнопка меню">
+            <svg height="40" width="40">
+            <use href="images/symbol-defs-optimized.svg#close"></use>
+            <use href="images/symbol-defs-optimized.svg#burger"></use>
+          </svg></button>
+          
           <!-- Site navigation -->
           <ul class="site-nav">
             <li>
@@ -22,17 +30,17 @@
             <li><a href="#!">Контакты</a></li>
           </ul>
         </nav>
-        <a href="mailto:info@example.com" class="header-mail-tel mail">
-          <svg class="icon" width="16" height="11">
-            <use href="images/symbol-defs-optimized.svg#icon-letter"></use>
-          </svg>
-          info@devstudio.com</a
-        >
-        <a href="tel:+380961111111" class="header-mail-tel tel">
-          <svg class="icon" width="10" height="15">
-            <use href="images/symbol-defs-optimized.svg#icon-tel"></use></svg
-          >+38 096 111 11 11</a
-        >
+        <div class="contacts">
+          <a href="mailto:info@example.com" class="header-mail-tel mail">
+            <svg class="icon" width="16" height="11">
+              <use href="images/symbol-defs-optimized.svg#icon-letter"></use>
+            </svg>
+            info@devstudio.com</a>
+          <a href="tel:+380961111111" class="header-mail-tel tel">
+            <svg class="icon" width="10" height="15">
+              <use href="images/symbol-defs-optimized.svg#icon-tel"></use>
+            </svg>+38 096 111 11 11</a>
+        </div>  
       </div>
     </header>
     <!-- Main -->
@@ -468,7 +476,7 @@
           <p>Подпишитесь на рассылку</p>
           <form class="subscribe-form" action="#!">
             <input type="email" name="email" / placeholder="E-mail">
-            <button type="button" name="subscribe">
+            <button type="button" name="subscribe" aria-label="Подписаться">
               Подписаться
               <svg class="subscribe-svg" width="20" height="20">
                 <title>Paper plane</title>
@@ -481,7 +489,7 @@
     </footer>
     <div data-modal class="backdrop is-hidden">
       <div class="modal">
-        <button data-modal-close type="button" class="close-button">
+        <button data-modal-close type="button" class="close-button" aria-label="Закрыть">
           <svg class="close-svg" width="11" height="11">
             <title>Close</title>
             <use href="images/symbol-defs-optimized.svg#close"></use>
@@ -526,7 +534,7 @@
             </span>
             <span>Соглашаюсь с рассылкой и принимаю <a href="#!">Условия договора</a></span>
           </label>
-          <button type="button" class="send-button">Отправить</button>
+          <button type="button" class="send-button" aria-label="Отправить">Отправить</button>
           </div>
         </form>
       </div>

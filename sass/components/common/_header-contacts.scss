@@ -1,19 +1,19 @@
-header .tel {
-  margin-left: 30px;
-  display: flex;
-  align-items: center;
-  .icon {
-    margin-right: 10px;
-    fill: currentColor;
+header .contacts {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+  @include viewport('tablet') {
+    opacity: 1;
+    pointer-events: auto;
+    top: 15px;
+    right: 21px;
+    display: flex;
+    flex-direction: column;
   }
-}
-header .mail {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  .icon {
-    margin-right: 10px;
-    fill: currentColor;
+  @include viewport('desktop') {
+    flex-direction: row;
+    top: 36px;
   }
 }
 .header-mail-tel {
@@ -23,5 +23,21 @@ header .mail {
   &:hover,
   &:focus {
     color: $accent;
+  }
+}
+header .tel {
+  @include viewport('desktop') {
+    margin-left: 30px;
+  }
+  .icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+header .mail {
+  margin-bottom: 10px;
+  .icon {
+    margin-right: 10px;
+    fill: currentColor;
   }
 }

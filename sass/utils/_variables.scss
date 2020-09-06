@@ -6,3 +6,14 @@ $secondary: #ffffff;
 $black: #000000;
 $mail-tel: rgba(255, 255, 255, 1);
 $grey: #f5f4fa;
+/*Break points for media*/
+$tablet: 768px;
+$desktop: 1200px;
+$breakpoints: (
+  'tablet': (
+    '(min-width: 768px)',
+  ),
+  'desktop': (
+    '(min-width: 1200px)',
+  ),
+);

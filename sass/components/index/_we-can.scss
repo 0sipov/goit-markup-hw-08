@@ -1,5 +1,13 @@
 .we-can {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
   padding-top: 0;
+  @include viewport('desktop') {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+  }
   .items {
     display: flex;
   }
