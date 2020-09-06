@@ -1,9 +1,24 @@
 .footer {
   .contacts {
-    margin-right: 69px;
+    @include viewport('tablet') {
+      margin-right: 165px;
+    }
+    @include viewport('desktop') {
+      margin-right: 70px;
+    }
+  }
+  address {
+    text-align: center;
+    @include viewport('desktop') {
+      text-align: start;
+    }
   }
   .mail-tel {
+    text-align: center;
     margin-top: 9px;
     display: block;
+    @include viewport('desktop') {
+      text-align: start;
+    }
   }
 }

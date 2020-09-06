@@ -1,9 +1,14 @@
 .footer {
   .social-networks {
-    padding-top: 12px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    @include viewport('tablet') {
+      margin-top: 0;
+    }
+    @include viewport('desktop') {
+      padding-top: 12px;
+    }
   }
   .social-networks a {
     display: flex;
@@ -21,12 +26,15 @@
   }
   .social-networks p {
     margin-bottom: 20px;
+    text-align: center;
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
     color: $secondary;
   }
   .social-networks .items {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
   }
   .social-networks .item:not(:first-child) {

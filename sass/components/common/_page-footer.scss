@@ -2,14 +2,25 @@ footer {
   background-color: #2f303a;
 }
 .footer {
-  padding: 60px 0;
+  padding: 60px 15px;
   @include viewport('tablet') {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include viewport('desktop') {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: start;
   }
 
   .logo {
+    text-align: center;
     display: block;
     margin-bottom: 20px;
     color: $secondary;
+    @include viewport('desktop') {
+      text-align: start;
+    }
   }
 }
