@@ -826,7 +826,14 @@ header .mail .icon {
 }
 
 .team h2 {
+  font-size: 28px;
   margin-bottom: 50px;
+}
+
+@media (min-width: 1200px) {
+  .team h2 {
+    font-size: 36px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -869,7 +876,7 @@ header .mail .icon {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-width: 767px) {
-  .team .teammate-card:nth-child(1), .team .teammate-card:nth-child(2) {
+  .team .teammate-card:nth-child(-n + 2) {
     margin-bottom: 30px;
   }
 }
@@ -926,15 +933,32 @@ header .mail .icon {
   margin-bottom: 50px;
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .clients h2 {
+    font-size: 36px;
+  }
+}
+
+.clients .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: 1200px) {
+  .clients .items {
+    flex-wrap: nowrap;
+  }
 }
 
 .clients a {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 170px;
   min-height: 90px;
   fill: #757575;
   border: 1px solid #757575;
@@ -944,6 +968,40 @@ header .mail .icon {
 .clients a:hover, .clients a:focus {
   fill: #2196f3;
   border: 1px solid #2196f3;
+}
+
+.clients .item {
+  width: calc((100% - 30px) / 2);
+}
+
+@media screen and (max-width: 766px) {
+  .clients .item:nth-child(2n) {
+    margin-left: 30px;
+  }
+  .clients .item:nth-child(-n + 4) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 767px) {
+  .clients .item {
+    width: calc((100% - 30px * 2) / 3);
+  }
+  .clients .item:not(:nth-child(3n-2)) {
+    margin-left: 30px;
+  }
+  .clients .item:nth-child(-n + 3) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .clients .item {
+    margin: 0;
+  }
+  .clients .item + .item {
+    margin-left: 30px;
+  }
 }
 
 footer {

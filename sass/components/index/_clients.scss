@@ -4,18 +4,25 @@
 
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     text-align: center;
+    @include viewport('desktop') {
+      font-size: 36px;
+    }
   }
-  // .items {
-  //   display: flex;
-  //   justify-content: center;
-  // }
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include viewport('desktop') {
+      flex-wrap: nowrap;
+    }
+  }
   a {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 170px;
     min-height: 90px;
     fill: $primary-text;
     border: 1px solid $primary-text;
@@ -26,7 +33,30 @@
       border: 1px solid $accent;
     }
   }
-  // .item:not(:first-child) {
-  //   margin-left: 30px;
-  // }
+}
+.clients .item {
+  width: calc((100% - 30px) / 2);
+  @media screen and (max-width: $tablet - 2px) {
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: $desktop - 1px) and (min-width: $tablet - 1) {
+    width: calc((100% - 30px * 2) / 3);
+    &:not(:nth-child(3n-2)) {
+      margin-left: 30px;
+    }
+    &:nth-child(-n + 3) {
+      margin-bottom: 30px;
+    }
+  }
+  @include viewport('desktop') {
+    margin: 0;
+    & + .item {
+      margin-left: 30px;
+    }
+  }
 }

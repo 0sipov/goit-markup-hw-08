@@ -1,6 +1,10 @@
 .team {
   background-color: $grey;
   h2 {
+    font-size: 28px;
+    @include viewport('desktop') {
+      font-size: 36px;
+    }
     margin-bottom: 50px;
   }
   .items {
@@ -32,8 +36,7 @@
         margin-left: 30px;
       }
       @media screen and (max-width: $desktop - 1px) and (min-width: $tablet - 1) {
-        &:nth-child(1),
-        &:nth-child(2) {
+        &:nth-child(-n + 2) {
           margin-bottom: 30px;
         }
       }
