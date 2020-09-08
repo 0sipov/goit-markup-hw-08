@@ -22,7 +22,7 @@
     &.is-open .icon-burger {
       display: none;
     }
-    @include viewport('tablet') {
+    @media (min-width: 769px) {
       position: absolute;
       opacity: 0;
       pointer-events: none;

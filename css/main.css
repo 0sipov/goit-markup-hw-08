@@ -538,7 +538,7 @@ header.border-bottom {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .nav-bar .menu-button {
     position: absolute;
     opacity: 0;
@@ -694,7 +694,7 @@ header .mail .icon {
     padding-bottom: 12px;
   }
   .mobile-navigation .current {
-    width: 80px;
+    width: 100px;
   }
 }
 
@@ -1342,6 +1342,11 @@ footer {
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.recall-form p {
+  text-align: center;
+  font-weight: 700;
 }
 
 .recall-form label {
