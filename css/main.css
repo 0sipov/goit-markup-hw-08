@@ -1304,12 +1304,20 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   display: inline-block;
-  max-width: 528px;
+  width: calc(100% - 15px * 2);
+  max-width: 450px;
   background-color: #ffffff;
 }
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.1);
+}
+
+@media (min-width: 1200px) {
+  .backdrop.is-hidden .modal {
+    width: calc(100% - 222px * 2);
+    max-width: 528px;
+  }
 }
 
 .modal .close-button {

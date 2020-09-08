@@ -19,10 +19,15 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   display: inline-block;
-  max-width: 528px;
+  width: calc(100% - 15px * 2);
+  max-width: 450px;
   background-color: $secondary;
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(1.1);
+    @include viewport('desktop') {
+      width: calc(100% - 222px * 2);
+      max-width: 528px;
+    }
   }
   .close-button {
     position: absolute;
