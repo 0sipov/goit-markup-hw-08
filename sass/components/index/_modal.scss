@@ -19,8 +19,7 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   display: inline-block;
-  min-height: 581px;
-  min-width: 528px;
+  max-width: 528px;
   background-color: $secondary;
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(1.1);

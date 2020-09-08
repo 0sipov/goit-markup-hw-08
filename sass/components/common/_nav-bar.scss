@@ -13,6 +13,15 @@
       fill: $accent;
       cursor: pointer;
     }
+    .icon-close {
+      display: none;
+    }
+    &.is-open .icon-close {
+      display: block;
+    }
+    &.is-open .icon-burger {
+      display: none;
+    }
     @include viewport('tablet') {
       position: absolute;
       opacity: 0;

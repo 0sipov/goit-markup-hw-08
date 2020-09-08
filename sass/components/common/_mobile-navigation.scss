@@ -1,0 +1,61 @@
+.mobile-navigation {
+  @media screen and (max-width: $tablet) {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    left: -15px;
+    top: 60px;
+    z-index: 1;
+    width: calc(100% + 30px);
+    text-align: center;
+    opacity: 1;
+    pointer-events: all;
+    background-color: $secondary;
+    border-top: 1px solid #ececec;
+    li {
+      margin: 0;
+      & + li {
+        margin-top: 40px;
+      }
+    }
+    a {
+      font-size: 18px;
+      padding-top: 0;
+      padding-bottom: 12px;
+    }
+    .current {
+      width: 80px;
+    }
+  }
+}
+header .contacts {
+  @media screen and (max-width: $tablet) {
+    position: absolute;
+    top: 297px;
+    left: -15px;
+    padding: 60px 0;
+    z-index: 1;
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% + 30px);
+    opacity: 1;
+    background-color: $secondary;
+    a {
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (max-width: $tablet) {
+  .site-navigation {
+    display: none;
+    &.is-open {
+      display: block;
+    }
+  }
+}

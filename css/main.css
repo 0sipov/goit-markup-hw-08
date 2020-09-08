@@ -526,6 +526,18 @@ header.border-bottom {
   cursor: pointer;
 }
 
+.nav-bar .menu-button .icon-close {
+  display: none;
+}
+
+.nav-bar .menu-button.is-open .icon-close {
+  display: block;
+}
+
+.nav-bar .menu-button.is-open .icon-burger {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .nav-bar .menu-button {
     position: absolute;
@@ -602,7 +614,6 @@ header .contacts {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  display: none;
 }
 
 @media (min-width: 768px) {
@@ -651,6 +662,70 @@ header .mail {
 header .mail .icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-navigation {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    left: -15px;
+    top: 60px;
+    z-index: 1;
+    width: calc(100% + 30px);
+    text-align: center;
+    opacity: 1;
+    pointer-events: all;
+    background-color: #ffffff;
+    border-top: 1px solid #ececec;
+  }
+  .mobile-navigation li {
+    margin: 0;
+  }
+  .mobile-navigation li + li {
+    margin-top: 40px;
+  }
+  .mobile-navigation a {
+    font-size: 18px;
+    padding-top: 0;
+    padding-bottom: 12px;
+  }
+  .mobile-navigation .current {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .contacts {
+    position: absolute;
+    top: 297px;
+    left: -15px;
+    padding: 60px 0;
+    z-index: 1;
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% + 30px);
+    opacity: 1;
+    background-color: #ffffff;
+  }
+  header .contacts a {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-navigation {
+    display: none;
+  }
+  .site-navigation.is-open {
+    display: block;
+  }
 }
 
 .hero {
@@ -1229,8 +1304,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   display: inline-block;
-  min-height: 581px;
-  min-width: 528px;
+  max-width: 528px;
   background-color: #ffffff;
 }
 
@@ -1270,10 +1344,6 @@ footer {
   letter-spacing: 0.03em;
 }
 
-.recall-form {
-  display: none;
-}
-
 .recall-form label {
   display: block;
   position: relative;
@@ -1294,6 +1364,11 @@ footer {
   padding-left: 42px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.recall-form textarea {
+  width: 100%;
 }
 
 .recall-form input:focus,

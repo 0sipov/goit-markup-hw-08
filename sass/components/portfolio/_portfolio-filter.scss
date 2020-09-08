@@ -5,6 +5,7 @@
   &-filter {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 50px;
   }
   &-filter li:not(:first-child) {
@@ -12,6 +13,7 @@
   }
   &-filter-button {
     padding: 6px 22px;
+    margin-bottom: 15px;
 
     border: none;
     border-radius: 4px;

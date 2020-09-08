@@ -2,7 +2,6 @@ header .contacts {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  display: none;
   @include viewport('tablet') {
     opacity: 1;
     pointer-events: auto;
