@@ -792,20 +792,26 @@ header .mail .icon {
 
 .works .item {
   position: relative;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .works .item-title {
+  position: relative;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  background-color: #ffffff;
   border-top: none;
+  z-index: 1;
 }
 
 .works .item-description-scene {
+  max-height: 390px;
   overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  height: 294px;
 }
 
 .works .item-description {
@@ -860,6 +866,9 @@ header .mail .icon {
   }
   .works .item:not(:nth-child(3n)) {
     margin-right: 30px;
+  }
+  .works .item:not(:nth-child(-n + 3)) {
+    margin-top: 30px;
   }
 }
 
