@@ -840,7 +840,7 @@ header .mail .icon {
   opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .works .item:not(:first-child) {
     margin-top: 30px;
     margin-left: auto;
@@ -848,7 +848,7 @@ header .mail .icon {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .works .item {
     width: calc((100% - 30px) / 2);
   }
