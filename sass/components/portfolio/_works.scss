@@ -28,11 +28,22 @@
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       opacity: 0;
+      @media screen and (max-width: 480px),
+        (min-width: $tablet) and (max-width: 1000px),
+        (min-width: 1200px) {
+        padding: 20px 10px;
+      }
     }
     &-description p {
       font-size: 18px;
       line-height: 28px;
       color: $secondary;
+      @media screen and (max-width: 480px),
+        (min-width: $tablet) and (max-width: 1000px),
+        (min-width: 1200px) {
+        font-size: 14px;
+        letter-spacing: 0.01em;
+      }
     }
     &:hover,
     &:focus {
