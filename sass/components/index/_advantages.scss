@@ -1,7 +1,9 @@
 .advantages {
+  @media (max-width: 450px) {
+    display: none;
+  }
   .items {
     width: 100%;
-
     @include viewport('tablet') {
       display: flex;
       justify-content: space-between;

@@ -786,6 +786,12 @@ header .mail .icon {
   min-height: 50px;
 }
 
+@media (max-width: 450px) {
+  .advantages {
+    display: none;
+  }
+}
+
 .advantages .items {
   width: 100%;
 }
